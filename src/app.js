@@ -21,7 +21,7 @@ const onFormSubmit = (e) => {
 };
 
 const onRemoveAll = () => {
-    app.options = [];
+    app.options = []; 
     renderOptions();
 }
 
