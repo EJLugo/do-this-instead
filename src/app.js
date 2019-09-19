@@ -1,3 +1,14 @@
+// const obj = {
+//     name: 'Belinda',
+//     getName() {
+//       return this.name;  
+//     }
+// };
+// console.log(obj.getName());
+
+// const getName = obj.getName;
+// console.log(getName())
+
 class IndecisionApp extends React.Component {
     render() {
         const title = 'Indecision';
@@ -11,7 +22,7 @@ class IndecisionApp extends React.Component {
                 <Options options={options}/>
                 <AddOption />
             </div>
-        )
+        ) 
     }
 }
 
@@ -42,8 +53,13 @@ class Action extends React.Component {
 }
 
 class Options extends React.Component {
+    constructor(props) {
+        super(props);
+        this.removeAll = this.removeAll.bind(this);
+    }
     removeAll() {
-        alert('some message')
+        // alert('some message')
+        console.log(this.props.options);
     }
 
     render() {
